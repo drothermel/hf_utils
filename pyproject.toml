@@ -1,0 +1,37 @@
+[project]
+name = "hf-utils"
+version = "0.1.0"
+description = "HuggingFace utilities for DataDecide datasets and model management"
+readme = "README.md"
+authors = [
+    { name = "Danielle Rothermel", email = "danielle.rothermel@gmail.com" }
+]
+requires-python = ">=3.9"
+dependencies = [
+    "datasets>=4.0.0",
+    "pandas>=2.3.1",
+    "numpy>=2.0.2",
+    "pyarrow>=21.0.0",
+    "huggingface_hub",
+    "torch>=2.7.1",
+    "safetensors>=0.5.3",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+datadec = { path = "../datadec", editable = true }
+
+[project.optional-dependencies]
+datadec = ["datadec"]
+
+[tool.ruff]
+line-length = 88
+include = ["src/**/*.py", "scripts/**/*.py"]
+exclude = ["outputs/*", "notebooks/*"]
+
+[tool.ruff.format]
+indent-style = "space"
+quote-style = "double"
