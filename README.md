@@ -1,4 +1,5 @@
-# HF Utils HuggingFace utilities for DataDecide datasets and model management.
+# HF Utils 
+HuggingFace utilities for DataDecide datasets and model management.
 
 ## Overview 
 This package provides utilities for working with HuggingFace datasets and models, particularly for the DataDecide framework. It offers convenient functions to load and process perplexity evaluation results, downstream task evaluation data, and model checkpoints.
